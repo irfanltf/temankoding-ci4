@@ -2,6 +2,7 @@
 * [Intro CodeIngiter 4](#a-intro-codeigniter-4)
 * [Install CodeIgniter 4](#b-installasi-codeigniter-4)
 * [Konsep MVC](#c-konsep-mvc)
+* [Konfigurasi Database](#d-konfigurasi-database)
 
 # A. Intro Codeigniter 4
 ```
@@ -151,3 +152,8 @@ Misalkan untuk dapat menampilkan data film seperti dibawah ini, kita akan melaku
 
 
 
+### 4. Jadi Apa MVC?
+`MVC atau Model-View-Controller adalah suatu arsitektur perangkat lunak yang membagi sebuah aplikasi menjadi tiga komponen utama: Model, View, dan Controller. MVC memungkinkan pengembangan perangkat lunak yang lebih terstruktur, modular, dan mudah dipelihara`
+
+
+# D. Konfigurasi Database
