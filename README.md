@@ -1,6 +1,7 @@
 # Panduan CodeIgniter 4
 * [Intro CodeIngiter 4](#a-intro-codeigniter-4)
 * [Install CodeIgniter 4](#b-installasi-codeigniter-4)
+* [Konseep MVC](#c-konsep-mvc)
 
 # A. Intro Codeigniter 4
 ```
@@ -67,7 +68,7 @@ Anda dapat mengunduh Composer dari situs resmi Composer di https://getcomposer.o
 
 
 ### 1. Install CodeIgniter 4 Menggunakan Composer
-##### 1.Tentukan folder penyimpanan: Pilih folder di komputer Anda di mana Anda ingin menyimpan proyek CodeIgniter 4.
+##### 1. Tentukan folder penyimpanan: Pilih folder di komputer Anda di mana Anda ingin menyimpan proyek CodeIgniter 4.
 ##### 2. Buka terminal atau command prompt: Buka terminal atau command prompt di komputer Anda.
 
 Navigasi ke folder penyimpanan: Gunakan perintah cd untuk berpindah ke folder penyimpanan yang telah Anda tentukan sebelumnya. Misalnya, jika Anda ingin menyimpan proyek di folder htdocs dalam XAMPP di Windows, perintahnya mungkin seperti ini:
@@ -80,7 +81,23 @@ composer create-project codeigniter4/appstarter nama-folder
 
 ##### 3. Tunggu proses unduhan selesai: Composer akan mengunduh dan menginstal CodeIgniter 4 serta semua dependensi yang diperlukan. Tunggu hingga proses selesai. Ini mungkin membutuhkan beberapa saat tergantung pada kecepatan koneksi internet Anda.
 ![Picture10](https://github.com/irfanltf/temankoding-ci4/assets/48278734/ade266d8-d167-48a9-951d-380ce3a53054)
+Pastikan versi PHP > 7.3, aktifkan ektensi intl dan mbstring pada php.ini 
+
 
 ##### 4. Proyek CodeIgniter 4 siap digunakan: Setelah proses selesai, Anda akan memiliki proyek CodeIgniter 4 yang siap digunakan di folder yang telah Anda tentukan. Anda dapat membuka proyek tersebut dan mulai mengembangkan aplikasi menggunakan CodeIgniter 4.
 
 
+### 2. Install CodeIgniter 4 Seecara Manual
+untuk mengunduh secara menual anda dapat langsung mendownloadnya pada link berikut :
+
+https://codeigniter.com/download 
+
+atau ke link github berikut :
+
+https://github.com/codeigniter4/appstarter
+
+
+berikut tampilan ketika codeigniter pertama kali dijalanlan
+![Picture11](https://github.com/irfanltf/temankoding-ci4/assets/48278734/d0f7ca7f-2aae-487e-ba71-93c609a22c5b)
+
+# C. Konsep MVC
