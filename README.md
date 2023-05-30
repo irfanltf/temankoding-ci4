@@ -130,11 +130,13 @@ Misalkan untuk dapat menampilkan data film seperti dibawah ini, kita akan melaku
 
 #### 2.  Request akan ditangani oleh controller dan method yang dituju, pada controller request akan dilanjutkan ke model atau view Jika request membutuhkan data maka akan diteruskan ke model
 <img width="358" alt="Picture13" src="https://github.com/irfanltf/temankoding-ci4/assets/48278734/e68c872d-e132-4674-aa8f-acbe744110e7">
-***buat  sebuah file controller dengan nama Film.php dalam folder controllers dan tulis kode diatas***
+
+`buat  sebuah file controller dengan nama Film.php dalam folder controllers dan tulis kode diatas`
 
 #### 3. Model berisi logika data, atau juga interaksi ke database
 <img width="393" alt="Picture13-5" src="https://github.com/irfanltf/temankoding-ci4/assets/48278734/6f1a2471-289a-4327-b396-b6da5d213b9e">
-***buat sebuah file model dengan nama filmModel.php dalam folder models dan tulis kode diatas***
+
+`buat sebuah file model dengan nama filmModel.php dalam folder models dan tulis kode diatas`
 
 #### 4. Controller akan mendapatkan hasil dari request yang dilakukan ke model, jika request berhasil maka data akan dikembalikan ke controller Controller hanya menerima nilai hasil request, controller tidak menangani logika data 
 <img width="352" alt="Picture14" src="https://github.com/irfanltf/temankoding-ci4/assets/48278734/20e35fc6-cdb5-4351-8164-a58bd9c2ba0f">
@@ -144,7 +146,8 @@ Misalkan untuk dapat menampilkan data film seperti dibawah ini, kita akan melaku
 
 #### 6. Informasi akan ditampilkan ke user 
 <img width="415" alt="Picture16" src="https://github.com/irfanltf/temankoding-ci4/assets/48278734/a7108b4a-9e4e-4132-a6f1-fcc73e0e5336">
-***buat sebuah file view dengan nama index.php dalam folder views/film dan tulis kode diatas***
+
+`buat sebuah file view dengan nama index.php dalam folder views/film dan tulis kode diatas`
 
 
 
