@@ -1,7 +1,7 @@
 # Panduan CodeIgniter 4
 * [Intro CodeIngiter 4](#a-intro-codeigniter-4)
 * [Install CodeIgniter 4](#b-installasi-codeigniter-4)
-* [Konseep MVC](#c-konsep-mvc)
+* [Konsep MVC](#c-konsep-mvc)
 
 # A. Intro Codeigniter 4
 ```
@@ -101,3 +101,50 @@ berikut tampilan ketika codeigniter pertama kali dijalanlan
 ![Picture11](https://github.com/irfanltf/temankoding-ci4/assets/48278734/d0f7ca7f-2aae-487e-ba71-93c609a22c5b)
 
 # C. Konsep MVC
+### 1. Sejarah MVC
+1. Awal pengembangan perangkat lunak: Pada awal pengembangan perangkat lunak, tidak ada pendekatan yang konsisten untuk mengorganisir kode program. Perangkat lunak sering kali terdiri dari kode yang tercampur aduk tanpa pemisahan yang jelas antara tampilan, logika bisnis, dan logika data.
+
+2. Smalltalk: Pada tahun 1970-an, bahasa pemrograman Smalltalk dikembangkan di Xerox PARC (Pusat Penelitian Palo Alto). Smalltalk memperkenalkan konsep pemrograman berorientasi objek dan menjadi landasan untuk perkembangan MVC.
+
+3. Pengembangan konsep MVC: MVC dikembangkan sebagai metode untuk memisahkan tampilan (View), logika bisnis (Model), dan interaksi antara keduanya (Controller). Tujuan utama dari MVC adalah memfasilitasi pengembangan perangkat lunak yang lebih terstruktur, mudah dimengerti, dan dapat dipelihara.
+
+4. Implementasi MVC pada Smalltalk: Pada tahun 1979, Adele Goldberg dan David Robson di Xerox PARC menerapkan MVC pada lingkungan pengembangan Smalltalk-80. Mereka menggunakannya untuk mengembangkan lingkungan pengembangan perangkat lunak yang interaktif dan visual.
+
+5. Penggunaan MVC dalam kerangka pengembangan perangkat lunak: Seiring berjalannya waktu, MVC menjadi populer dan diadopsi oleh berbagai kerangka pengembangan perangkat lunak. Pada tahun 1988, NeXT Computer Inc., perusahaan yang didirikan oleh Steve Jobs setelah keluar dari Apple, menggunakan MVC sebagai dasar untuk mengembangkan kerangka kerja NeXTSTEP.
+
+6. Penyebaran luas MVC: Dalam beberapa dekade berikutnya, MVC menjadi populer dalam pengembangan perangkat lunak. Berbagai bahasa pemrograman dan kerangka kerja mengadopsi konsep ini dan mengembangkan implementasi MVC yang sesuai dengan karakteristik dan kebutuhan mereka.
+
+7. Hingga saat ini, MVC tetap menjadi pendekatan yang umum digunakan dalam pengembangan perangkat lunak. Namun, variasi dan modifikasi dari konsep ini telah muncul, seperti Model-View-ViewModel (MVVM) dan Model-View-Presenter (MVP), yang memperluas atau memodifikasi peran dan hubungan antara komponen MVC asli
+
+### 2. MVC konsep Flow
+<img width="1156" alt="Screenshot 2023-05-30 at 21 39 54" src="https://github.com/irfanltf/temankoding-ci4/assets/48278734/020be69d-42b4-4182-8046-067f7ba14e01">
+
+
+<img width="1156" alt="Screenshot 2023-05-30 at 21 46 34" src="https://github.com/irfanltf/temankoding-ci4/assets/48278734/afa7a698-fc44-4629-bbce-dfeba793c01f">
+
+### 3. Cara Kerja MVC pada CodeIgniter 4
+Misalkan untuk dapat menampilkan data film seperti dibawah ini, kita akan melakukan request ke /film atau request akan dikirim ke controller film method index
+
+#### 1. Misalkan untuk dapat menampilkan data film seperti dibawah ini, kita akan melakukan request ke /film atau request akan dikirim ke controller film method index
+![Picture12](https://github.com/irfanltf/temankoding-ci4/assets/48278734/178a1e07-09e2-4a00-9005-70dcd1f51ddf)
+
+#### 2.  Request akan ditangani oleh controller dan method yang dituju, pada controller request akan dilanjutkan ke model atau view Jika request membutuhkan data maka akan diteruskan ke model
+<img width="358" alt="Picture13" src="https://github.com/irfanltf/temankoding-ci4/assets/48278734/e68c872d-e132-4674-aa8f-acbe744110e7">
+***buat  sebuah file controller dengan nama Film.php dalam folder controllers dan tulis kode diatas***
+
+#### 3. Model berisi logika data, atau juga interaksi ke database
+<img width="393" alt="Picture13-5" src="https://github.com/irfanltf/temankoding-ci4/assets/48278734/6f1a2471-289a-4327-b396-b6da5d213b9e">
+***buat sebuah file model dengan nama filmModel.php dalam folder models dan tulis kode diatas***
+
+#### 4. Controller akan mendapatkan hasil dari request yang dilakukan ke model, jika request berhasil maka data akan dikembalikan ke controller Controller hanya menerima nilai hasil request, controller tidak menangani logika data 
+<img width="352" alt="Picture14" src="https://github.com/irfanltf/temankoding-ci4/assets/48278734/20e35fc6-cdb5-4351-8164-a58bd9c2ba0f">
+
+#### 5. Data akan ditampilkan ke halaman view
+<img width="352" alt="Picture14" src="https://github.com/irfanltf/temankoding-ci4/assets/48278734/20e35fc6-cdb5-4351-8164-a58bd9c2ba0f">
+
+#### 6. Informasi akan ditampilkan ke user 
+<img width="415" alt="Picture16" src="https://github.com/irfanltf/temankoding-ci4/assets/48278734/a7108b4a-9e4e-4132-a6f1-fcc73e0e5336">
+***buat sebuah file view dengan nama index.php dalam folder views/film dan tulis kode diatas***
+
+
+
