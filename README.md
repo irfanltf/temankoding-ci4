@@ -1,6 +1,6 @@
 # Panduan CodeIgniter 4
 * [Intro CodeIngiter 4](#a-intro-codeigniter-4)
-* [Install CodeIgniter 4](#b-install-codeigniter-4)
+* [Install CodeIgniter 4](#b-installasi-codeigniter-4)
 
 # A. Intro Codeigniter 4
 ```
