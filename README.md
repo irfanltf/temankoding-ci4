@@ -1,6 +1,6 @@
 # Panduan CodeIgniter 4
-* [Intro CodeIngiter 4](http://https://github.com/irfanltf/README#intro-codeigniter-4)
-* [Install CodeIgniter 4](https://github.com/irfanltf/README#install-codeigniter-4)
+* [Intro CodeIngiter 4](#intro-codeigniter-4)
+* [Install CodeIgniter 4](#install-codeigniter-4)
 
 # A. Intro Codeigniter 4
 ```
