@@ -1,8 +1,13 @@
 # Panduan CodeIgniter 4
 * [Intro CodeIngiter 4](#a-intro-codeigniter-4)
 * [Install CodeIgniter 4](#b-installasi-codeigniter-4)
-* [Konsep MVC](#c-konsep-mvc)
-* [Konfigurasi Database](#d-konfigurasi-database)
+* [Konsep MVC (10)](#c-konsep-mvc)
+* [Konfigurasi Database (11)](#d-konfigurasi-database)
+* [Membuat Tampilan Menarik Menggunakan Bootstrap (13)](#e-membuat-tampilan-menarik-menggunakan-bootstrap)
+* [Insert Data ke database (14)](#f-insert-data-ke-database)
+* [Update dan Delete pada Database (15)](#g-update-dan-delete-pada-database)
+
+
 
 # A. Intro Codeigniter 4
 ```
@@ -157,3 +162,10 @@ Misalkan untuk dapat menampilkan data film seperti dibawah ini, kita akan melaku
 
 
 # D. Konfigurasi Database
+Konfigurasi database pada codeigniter 4 dapat dilakukan dengan 2 cara
+### 1. Konfigurasi pada file Database.php
+### 2. Konfigurasi pada file .env
+
+# E. Membuat Tampilan Menarik Menggunakan Bootstrap
+# F. Insert Data ke database
+# G. Update dan Delete pada Database
