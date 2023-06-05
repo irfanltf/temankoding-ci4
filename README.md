@@ -164,7 +164,17 @@ Misalkan untuk dapat menampilkan data film seperti dibawah ini, kita akan melaku
 # D. Konfigurasi Database
 Konfigurasi database pada codeigniter 4 dapat dilakukan dengan 2 cara
 ### 1. Konfigurasi pada file Database.php
+untuk konfigurasi pada file database.php dapat mengaksesnya pada folder app>Config>Database.php, lalu masukan hostname, username, password, dan database yang sesuai dengan project
+![Picture1](https://github.com/irfanltf/temankoding-ci4/assets/48278734/24ba3069-1f4c-42e2-9bb6-0ffa2bdf083b)
+
 ### 2. Konfigurasi pada file .env
+untuk mengkonfigurasi pada file env, save as terlebih dahulu file env pada folder aplikasi menjadi .env, cari pada bagian database biasanya di line ke 30, lalu sesuaikan juga hostname, database name, username, dan password dengan project
+![Picture2](https://github.com/irfanltf/temankoding-ci4/assets/48278734/cb5fdf8d-4779-47ad-ac4b-98e904d5b60e)
+
+*perlu diperhatikan!!! jika file .env sudah dibuat / dikonfigurasi maka konfigurasi pada Database.php akan diabaikan*
+
+### 3. Menyambungkan Model dengan table pada database
+
 
 # E. Membuat Tampilan Menarik Menggunakan Bootstrap
 # F. Insert Data ke database
