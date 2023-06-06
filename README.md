@@ -170,7 +170,8 @@ untuk konfigurasi pada file database.php dapat mengaksesnya pada folder app>Conf
 
 ### 2. Konfigurasi pada file .env
 untuk mengkonfigurasi pada file env, save as terlebih dahulu file env pada folder aplikasi menjadi .env, cari pada bagian database biasanya di line ke 30, lalu sesuaikan juga hostname, database name, username, dan password dengan project
-![Picture2](https://github.com/irfanltf/temankoding-ci4/assets/48278734/cb5fdf8d-4779-47ad-ac4b-98e904d5b60e)
+![database](https://github.com/irfanltf/temankoding-ci4/assets/48278734/711d7a6d-c923-4306-9d1d-5993839a37ff)
+
 
 *perlu diperhatikan!!! jika file .env sudah dibuat / dikonfigurasi maka konfigurasi pada Database.php akan diabaikan*
 
