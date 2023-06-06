@@ -223,7 +223,18 @@ Query Builder `select($columns)` Fungsi ini digunakan untuk memilih  kolom-kolom
 ![query builder](https://github.com/irfanltf/temankoding-ci4/assets/48278734/bd44f9dd-9415-462a-b836-58f5f253dbbc)
 
 
+**Dan masih banyak lagi!!! tambahkan semua contoh method diatas ditambahkan pada Model Film**
 
+**4. Ubah File Controller Film**
+
+ubah method `index` pada controller `Film` menjadi sebagai gambar dibawah ini, disana terlihat perubahan pada method `getFilm` menjadi method `getAllData` yang diambil dari Model `FilmModel`, dan juga view diarahkan ke `view v_film`
+
+![method on controller](https://github.com/irfanltf/temankoding-ci4/assets/48278734/ffce20e6-f5e9-41ae-80f4-cc5bc5cbb1db)
+
+
+**4. Ubah File View Film**
+
+save as file `index.php` pada folder film di view menjadi `v_film`
 
 # E. Membuat Tampilan Menarik Menggunakan Bootstrap
 # F. Insert Data ke database
