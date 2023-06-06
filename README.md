@@ -195,14 +195,34 @@ Tambahkan beberapa properti sebagai konfigurasi model, seperti table, primary ke
 Setelah menghubungkan kedatabase, data dapat disajikan dengan banyak cara, pada Codeigniter 4 sudah menyediakan method pada model untuk menyajikan data diantaranya adalah
 
 `findAll()` Fungsi ini digunakan untuk mengambil semua data dari tabe
+
+![get all](https://github.com/irfanltf/temankoding-ci4/assets/48278734/dfced1ab-e4d5-45c7-85ab-95a272b3561c)
+
+
 `find($id)` Fungsi ini digunakan untuk mencari data berdasarkan ID
+
+![find 2](https://github.com/irfanltf/temankoding-ci4/assets/48278734/36792373-bbf7-474b-ba9d-b17a0b507b9a)
+
+
 `where($column, $value)` Fungsi ini digunakan untuk melakukan query dengan kondisi WHERE
-`select($columns)` Fungsi ini digunakan untuk memilih  kolom-kolom tertentu dari tabel
+
+![get data by](https://github.com/irfanltf/temankoding-ci4/assets/48278734/9c73f690-c9e6-453a-aff2-368ee5eab32b)
+
+
 `orderBy($column, $order)` Fungsi ini digunakan untuk mengurutkan hasil query berdasarkan kolom tertentu
+
+
+![orderby 2](https://github.com/irfanltf/temankoding-ci4/assets/48278734/788f5101-b56d-412c-b017-c84022ec5d19)
+
 `limit($limit, $offset)`: Fungsi ini digunakan untuk membatasi  jumlah data yang diambil dari tabel
 
+![get limit](https://github.com/irfanltf/temankoding-ci4/assets/48278734/c8ab86b0-1780-4dc5-b3f9-b55d834334b3)
 
-![image](https://github.com/irfanltf/temankoding-ci4/assets/48278734/9f05d2d2-4f84-46d7-9067-0e4b7869629e)
+Query Builder `select($columns)` Fungsi ini digunakan untuk memilih  kolom-kolom tertentu dari tabel
+
+![query builder](https://github.com/irfanltf/temankoding-ci4/assets/48278734/bd44f9dd-9415-462a-b836-58f5f253dbbc)
+
+
 
 
 # E. Membuat Tampilan Menarik Menggunakan Bootstrap
