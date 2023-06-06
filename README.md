@@ -174,7 +174,7 @@ untuk mengkonfigurasi pada file env, save as terlebih dahulu file env pada folde
 *perlu diperhatikan!!! jika file .env sudah dibuat / dikonfigurasi maka konfigurasi pada Database.php akan diabaikan*
 
 ### 3. Menyambungkan Model dengan table pada database
-
+sebelumnya saat membahas tentang konsep MVC kita sudah membuat implementasi sederhana alur dari konsep MVC dengan memanfaatkan model untuk menyimpan data film, namun masih mempunyai kelemahan jika kita ingin menambahkan data atau mengubah data masih melakukannya secara manual yaitu mengubahnya ke modelnya langsung. selanjutnya kita akan memanfaatkan model untuk query ke database saja, artinya datanya disimpan ke database, dan pada model kita dapat hanya melakukan query saja, jika data tersedia, maka repsonse nya adalah berhasil dan mengembalikan data, namun jika tidak tersedia maka akan mengembalikan response gagal dan tidak mengembalikan data
 
 # E. Membuat Tampilan Menarik Menggunakan Bootstrap
 # F. Insert Data ke database
