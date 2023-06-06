@@ -165,7 +165,8 @@ Misalkan untuk dapat menampilkan data film seperti dibawah ini, kita akan melaku
 Konfigurasi database pada codeigniter 4 dapat dilakukan dengan 2 cara
 ### 1. Konfigurasi pada file Database.php
 untuk konfigurasi pada file database.php dapat mengaksesnya pada folder app>Config>Database.php, lalu masukan hostname, username, password, dan database yang sesuai dengan project
-![Picture1](https://github.com/irfanltf/temankoding-ci4/assets/48278734/24ba3069-1f4c-42e2-9bb6-0ffa2bdf083b)
+![Screenshot 2023-06-06 093231](https://github.com/irfanltf/temankoding-ci4/assets/48278734/72b338a3-a2da-4d1f-b8c5-10b8c704a50c)
+
 
 ### 2. Konfigurasi pada file .env
 untuk mengkonfigurasi pada file env, save as terlebih dahulu file env pada folder aplikasi menjadi .env, cari pada bagian database biasanya di line ke 30, lalu sesuaikan juga hostname, database name, username, dan password dengan project
@@ -175,6 +176,23 @@ untuk mengkonfigurasi pada file env, save as terlebih dahulu file env pada folde
 
 ### 3. Menyambungkan Model dengan table pada database
 sebelumnya saat membahas tentang konsep MVC kita sudah membuat implementasi sederhana alur dari konsep MVC dengan memanfaatkan model untuk menyimpan data film, namun masih mempunyai kelemahan jika kita ingin menambahkan data atau mengubah data masih melakukannya secara manual yaitu mengubahnya ke modelnya langsung. selanjutnya kita akan memanfaatkan model untuk query ke database saja, artinya datanya disimpan ke database, dan pada model kita dapat hanya melakukan query saja, jika data tersedia, maka repsonse nya adalah berhasil dan mengembalikan data, namun jika tidak tersedia maka akan mengembalikan response gagal dan tidak mengembalikan data
+
+**Let's Code!!!**
+
+**1. Buat Database yang akan menyimpan data film**
+setelah membuat database dengan nama `db_film` buat juga table `film` 
+![Screenshot 2023-06-06 093231](https://github.com/irfanltf/temankoding-ci4/assets/48278734/624299b1-909d-49ee-8b82-bf4d606a8ed9)
+
+
+**2. Konfigurasi pada file .env hubungkan ke database**
+![database](https://github.com/irfanltf/temankoding-ci4/assets/48278734/f1490269-43da-4597-b643-42c97ea4306c)
+sesuaikan ***hostname, username, password, dan db_name*** dengan settingan database project anda
+
+**3. Ubah File Model Film**
+Tambahkan beberapa properti sebagai konfigurasi model, seperti table, primary key, auto increment, dan lain sebagainya, properti yang ditambahkan hanya optional
+![models](https://github.com/irfanltf/temankoding-ci4/assets/48278734/62f857fc-ebd2-44c5-beb7-d195a04af473)
+
+
 
 # E. Membuat Tampilan Menarik Menggunakan Bootstrap
 # F. Insert Data ke database
