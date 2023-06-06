@@ -236,6 +236,22 @@ ubah method `index` pada controller `Film` menjadi sebagai gambar dibawah ini, d
 
 save as file `index.php` pada folder film di view menjadi `v_film`
 
+![view baru](https://github.com/irfanltf/temankoding-ci4/assets/48278734/63d85fcb-f74f-45a0-b4d1-c78fd4186343)
+
+jangan lupa tambahkan terlebih dahulu data pada database (contoh dibawah hanya 2 data silahkan tambahkan data sesuka hati)
+
+![Screenshot 2023-06-06 172919](https://github.com/irfanltf/temankoding-ci4/assets/48278734/4ae8d0cc-0811-413c-8bb3-cc8b731fca9f)
+
+
+jalankan codeigniter pada local development server
+
+![1](https://github.com/irfanltf/temankoding-ci4/assets/48278734/37cfb123-0cf9-4625-8efa-54f5a0012530)
+
+dan berikut hasilnya
+
+![2](https://github.com/irfanltf/temankoding-ci4/assets/48278734/ceca501b-e135-4403-ad5e-d09bd4b360fd)
+
+
 # E. Membuat Tampilan Menarik Menggunakan Bootstrap
 # F. Insert Data ke database
 # G. Update dan Delete pada Database
