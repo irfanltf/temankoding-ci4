@@ -165,7 +165,7 @@ Misalkan untuk dapat menampilkan data film seperti dibawah ini, kita akan melaku
 Konfigurasi database pada codeigniter 4 dapat dilakukan dengan 2 cara
 ### 1. Konfigurasi pada file Database.php
 untuk konfigurasi pada file database.php dapat mengaksesnya pada folder app>Config>Database.php, lalu masukan hostname, username, password, dan database yang sesuai dengan project
-![Screenshot 2023-06-06 093231](https://github.com/irfanltf/temankoding-ci4/assets/48278734/72b338a3-a2da-4d1f-b8c5-10b8c704a50c)
+![ddatabse](https://github.com/irfanltf/temankoding-ci4/assets/48278734/78b16117-0358-4654-896d-beb0b472b465)
 
 
 ### 2. Konfigurasi pada file .env
