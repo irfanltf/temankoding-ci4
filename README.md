@@ -185,7 +185,8 @@ setelah membuat database dengan nama `db_film` buat juga table `film`
 
 
 **2. Konfigurasi pada file .env hubungkan ke database**
-![database](https://github.com/irfanltf/temankoding-ci4/assets/48278734/f1490269-43da-4597-b643-42c97ea4306c)
+![database](https://github.com/irfanltf/temankoding-ci4/assets/48278734/5d02f199-54e4-4247-af1f-4b25abef7c04)
+
 sesuaikan ***hostname, username, password, dan db_name*** dengan settingan database project anda
 
 **3. Ubah File Model Film**
