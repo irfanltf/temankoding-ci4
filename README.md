@@ -192,6 +192,17 @@ sesuaikan ***hostname, username, password, dan db_name*** dengan settingan datab
 Tambahkan beberapa properti sebagai konfigurasi model, seperti table, primary key, auto increment, dan lain sebagainya, properti yang ditambahkan hanya optional
 ![models](https://github.com/irfanltf/temankoding-ci4/assets/48278734/62f857fc-ebd2-44c5-beb7-d195a04af473)
 
+Setelah menghubungkan kedatabase, data dapat disajikan dengan banyak cara, pada Codeigniter 4 sudah menyediakan method pada model untuk menyajikan data diantaranya adalah
+
+`findAll()` Fungsi ini digunakan untuk mengambil semua data dari tabe
+`find($id)` Fungsi ini digunakan untuk mencari data berdasarkan ID
+`where($column, $value)` Fungsi ini digunakan untuk melakukan query dengan kondisi WHERE
+`select($columns)` Fungsi ini digunakan untuk memilih  kolom-kolom tertentu dari tabel
+`orderBy($column, $order)` Fungsi ini digunakan untuk mengurutkan hasil query berdasarkan kolom tertentu
+`limit($limit, $offset)`: Fungsi ini digunakan untuk membatasi  jumlah data yang diambil dari tabel
+
+
+![image](https://github.com/irfanltf/temankoding-ci4/assets/48278734/9f05d2d2-4f84-46d7-9067-0e4b7869629e)
 
 
 # E. Membuat Tampilan Menarik Menggunakan Bootstrap
