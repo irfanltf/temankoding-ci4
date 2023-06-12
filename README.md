@@ -343,8 +343,10 @@ jika sebelumnya kita menampilkan data pada table, datanya ditampilkan dalam bari
 
 maka hasilnya adalah sebagai berikut :
 
-![image](https://github.com/irfanltf/temankoding-ci4/assets/48278734/ba70eb07-a99f-4f17-8e71-64917d166f73)
+![asa](https://github.com/irfanltf/temankoding-ci4/assets/48278734/8ec84fd5-771f-4368-ba3b-b1a04ab499ac)
 
+
+selanjutnya adalah membuat tampilan pada menu semua film
 
 # F. Insert Data ke database
 # G. Update dan Delete pada Database
