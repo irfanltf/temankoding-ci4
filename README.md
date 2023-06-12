@@ -285,11 +285,39 @@ untuk membuat `navigasi bar` anda dapat mengunjugi dokumentasi yang disediakan o
 
 lalu pilih jenis navbar mana yang ingin digunakan lalu, anda dapat langsung menggunakannya dengan copy source codenya
 
-![navbarnya](https://github.com/irfanltf/temankoding-ci4/assets/48278734/ed5848ae-a22c-4a26-b6fc-605f37691d68)
+![navbarnya](https://github.com/irfanltf/temankoding-ci4/assets/48278734/8d9f56b1-48c9-4c40-bb8a-8bae34f3b406)
 
-lalu tambahkan pada body view film seperti dibawah ini
 
-![htmlll](https://github.com/irfanltf/temankoding-ci4/assets/48278734/04b56c56-f6cf-4c1e-b626-265a9357772e)
+lalu pada tampilan film pada dibagian body tambahkan navbar yang kita copy dari bootstrap 
+
+![htmlll](https://github.com/irfanltf/temankoding-ci4/assets/48278734/9763dca2-f6ee-405f-a025-084e9287a7f2)
+
+hasilnya kira-kira sebagai berikut : 
+
+![kosong](https://github.com/irfanltf/temankoding-ci4/assets/48278734/9f73f448-db2b-4980-8cc1-d35c3b6e5d2a)
+
+
+- ubah isi menu dan class pada navbar
+
+selanjutnya kita akan mengubah nama menu yang akan disesuaikan dengan website kita seperti dibawah ini
+
+![ubah htmlnya ksoong](https://github.com/irfanltf/temankoding-ci4/assets/48278734/c6058f10-a234-4075-b37f-5ac740c65ece)
+
+kodenya sebagai berikut, kita menengubah tampilan warna  menunya menjadi `dark` dari sebelumnya adalah `light` pada `line 11`. kemudian juga mengubah nama menu menjadi terdapat menu `beranda, semua film, kategori film, dan tentang kami`.
+nantinya pada menu `beranda` akan menampilkan data film terbaru sejumlah 12 film, lalu pada menu `semua film` berisi semua data film, lalu pada menu `kategori film` berisi data kategori film sekaligus menampilkan film berdasarkan kategori, dan yang terakhir adalah menu `tentang kami` yang berisi informasi tentang website kita.
+
+![ubah htmlnya](https://github.com/irfanltf/temankoding-ci4/assets/48278734/4a1e1014-9507-4327-ba9b-5dacceb51b9b)
+
+- buat tampilan card bootstrap untuk menampilkan data film
+
+dibawah tutup tag `nav`, tambahkan tag `div` dengan class `container`.class  Container berfungsi untuk membungkus blok di dalamnya, sehingga terlihat rapi terhadap ukuran layar
+  
+![tag container](https://github.com/irfanltf/temankoding-ci4/assets/48278734/3d1e5746-a5aa-4ff2-889f-c4baf322f9c8)
+
+selanjutnya didalam tag div class `container`, buat tag div dengan class `row`, Class row berfungsi untuk membuat baris.
+
+![row](https://github.com/irfanltf/temankoding-ci4/assets/48278734/c0432fbc-938e-48c2-9103-dcd2ead91000)
+
 
 
 
