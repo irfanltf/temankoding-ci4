@@ -318,9 +318,32 @@ selanjutnya didalam tag div class `container`, buat tag div dengan class `row`, 
 
 ![row](https://github.com/irfanltf/temankoding-ci4/assets/48278734/c0432fbc-938e-48c2-9103-dcd2ead91000)
 
+selanjutnyta didalam tag div class `row`, buat tag div dengan class `col-md-4`, class col berfungsi untuk membuat column, dalam satu baris tampilan website jika kita menggunakan css grid milik bootstrap adalah maximal 12 column, artinya jika kita membuat `class-md-4`, maka class tersebut bernilai 4 kolom.
+
+![col](https://github.com/irfanltf/temankoding-ci4/assets/48278734/058ddb27-8e50-4aa4-a63a-ae4709a88bce)
+
+selanjutnya tambahkan card, anda dapat melihat refrensinya pada website bootsrap, dan adobsi pada kodingan kita
+
+![card](https://github.com/irfanltf/temankoding-ci4/assets/48278734/b6652ecc-2086-4f3f-bbd9-992427886b9d)
+
+letakan didalam tag div dengan class `col`
+
+![card isi](https://github.com/irfanltf/temankoding-ci4/assets/48278734/b948cc47-95c0-43e2-a12e-cb4d713053f5)
+
+hasil sementara akan menjadi seperti gambar dibawah ini:
+
+![jadi sementara](https://github.com/irfanltf/temankoding-ci4/assets/48278734/dec5afac-3317-4409-9bdb-6e1e3444194d)
 
 
+- tampilkan data dari database kedalam card
 
+jika sebelumnya kita menampilkan data pada table, datanya ditampilkan dalam baris, artinya data berulang setiap baris `lihat pada gambar atas` , kali ini kita akan membuat datanya ditampilkan dalam card, yang mana card disusun pada setiap 4 colom, artinya kita akan membuat perulangan setiap 4 kolom `lihat pada gambar bawah` sebagai berikut :
+
+![jadi seperti ini](https://github.com/irfanltf/temankoding-ci4/assets/48278734/a9ef4bcc-633c-49c5-83d8-e54d1fe4ee83)
+
+maka hasilnya adalah sebagai berikut :
+
+![image](https://github.com/irfanltf/temankoding-ci4/assets/48278734/ba70eb07-a99f-4f17-8e71-64917d166f73)
 
 
 # F. Insert Data ke database
