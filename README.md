@@ -257,5 +257,43 @@ dan berikut hasilnya
 
 
 # E. Membuat Tampilan Menarik Menggunakan Bootstrap
+
+- Udah Default Route
+
+![routess](https://github.com/irfanltf/temankoding-ci4/assets/48278734/11a035da-bcdf-4b3a-ad11-e8a08d57f67b)
+
+sebelumnya ubah `default routes` untuk mengarahkan ke controller `film`, agar ketika base url kita diakses akan langsung menampilkan data film
+
+- Unduh Bootstrap
+Buka https://getbootstrap.com/ lalu pilih menu `Docs` lalu pilih `download`, kemudian pada bagian `Compiled CSS and JS` pilih `Download`
+![bootstrap](https://github.com/irfanltf/temankoding-ci4/assets/48278734/111f607f-f30f-44cd-bb7d-d48c62866654)
+
+setelah berhasil mendownload file bootstrap selanjutnya  extract file zip, lalu pindahkan file `css` dan `js` kedalam assets pada folder `public`
+
+![folder](https://github.com/irfanltf/temankoding-ci4/assets/48278734/8b20a456-88bd-4a8a-a872-0d99621e370a)\
+
+- Ubah Tampilan Website Menggunakan Bootstrap
+
+buka file view `film` lalu hapus table html untuk menampilkan data filmnya, sisakan bagian struktur html dan tambahkan tag untuk memanggil css dan javascript bootsrtap seperti pada line `6 dan 12` dibawah ini : 
+![html](https://github.com/irfanltf/temankoding-ci4/assets/48278734/21ef3bb0-daf0-4403-b477-76e5523cc7d9)
+
+- mulai menulis bootsrap dengan membuat navigasi bar
+
+untuk membuat `navigasi bar` anda dapat mengunjugi dokumentasi yang disediakan oleh `bootstrap` dengan melalkukan pencarian pada bilah pencarian pada website `bootstrap`, lalu tekan `enter`
+
+![navbar](https://github.com/irfanltf/temankoding-ci4/assets/48278734/c2975066-11f6-4b36-9af4-c3e5059faaf0)
+
+lalu pilih jenis navbar mana yang ingin digunakan lalu, anda dapat langsung menggunakannya dengan copy source codenya
+
+![navbarnya](https://github.com/irfanltf/temankoding-ci4/assets/48278734/ed5848ae-a22c-4a26-b6fc-605f37691d68)
+
+lalu tambahkan pada body view film seperti dibawah ini
+
+![htmlll](https://github.com/irfanltf/temankoding-ci4/assets/48278734/04b56c56-f6cf-4c1e-b626-265a9357772e)
+
+
+
+
+
 # F. Insert Data ke database
 # G. Update dan Delete pada Database
