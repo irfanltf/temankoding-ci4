@@ -358,10 +358,131 @@ selanjutnya adalah membuat tampilan pada menu semua film
 selanjutnya anda dapat mencoba klik menu pada navbar yang sudah diisi hrefnya, jika sudah berhasil pindah halaman maka navbar sudah berfungsi dengan baik
 
 - buat template layout 
+
 > template layout ini berfungsi agar kita tidak membuat kode berulang pada view
 > seperti pada bagian header, navbar, dan juga footer yang notabenenya sama pada setiap halaman
 > maka dari itu disini template layout berfungsi agar kode kita lebih dinamis dan juga efektif, karena kita tidak membuat sesuatu yang sama berulang kali, berikut caranya
 > pertama buat folder `layout` lalu buat file dengan nama `layout.php`
+> copy bagian **_header sampai buka tag div dengan class container dan footer dari tutup tag div class container sampai akhir html_** , dari view semuafilm yang sudah kita buat
+```php
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layar Kaca 8080</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Layar Kece 8080</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/film">Semua Film</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/genre">Kategori Film</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">Tentang Kami</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+    </div>
+
+    <script src="/assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+```
+
+
+>didalam class container tag div kita panggil method renderSection seperti dibawah ini :
+    
+```php
+    <div class="container">
+        <?= $this->renderSection('content') ?>
+    </div>
+ ```
+ 
+ >buka kembali  file semuafilm, lalu hapus bagian header dan footer yang sudah kita pindahkan ke file `layout.php` pada folder `layout` mennjadi seperti dibawah ini :
+
+```php
+<h1>
+    Data Film
+</h1>
+<div class="row">
+    <?php foreach ($semuafilm as $film) : ?>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="/assets/cover/<?= $film["cover"] ?>" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $film["nama_film"] ?></h5>
+                    <p class="card-text"><?= $film["nama_genre"] ?> || <?= $film["duration"] ?></p>
+                    <a href="#" class="btn btn-info">Detail</a>
+                    <a href="#" class="btn btn-success">Update</a>
+                    <a href="#" class="btn btn-warning">Delete</a>
+                </div>
+            </div>
+        </div>
+    <?php endforeach; ?>
+</div>
+```
+>tambahkan method sectin menjadi seperti dibawah ini
+```php
+<?= $this->extend('layout/layout') ?>
+
+<?= $this->section('content') ?>
+<h1>
+    Data Film
+</h1>
+<div class="row">
+    <?php foreach ($semuafilm as $film) : ?>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="/assets/cover/<?= $film["cover"] ?>" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $film["nama_film"] ?></h5>
+                    <p class="card-text"><?= $film["nama_genre"] ?> || <?= $film["duration"] ?></p>
+                    <a href="#" class="btn btn-info">Detail</a>
+                    <a href="#" class="btn btn-success">Update</a>
+                    <a href="#" class="btn btn-warning">Delete</a>
+                </div>
+            </div>
+        </div>
+    <?php endforeach; ?>
+</div>
+
+<?= $this->endSection() ?>
+```
+
+> method extend digunakan untuk memanggil template layout yang sudah kita buat sebelumnya pada folder `layout` dan file `layout.php`
+
+> ada juga method section dibagian atas dan juga endsection dibawgian bawah, jadi sesuatu yang berada diantara section dan endsection akan dirender kedalam template layout
+
+![hasilnya](https://github.com/irfanltf/temankoding-ci4/assets/48278734/db684452-6755-4d72-96dc-b4b7a98cceb8)
+
+
+>jika kita tampilkan hasilnya akan tetap sama, namun kita sudah mengimpelentasikan template layout dari `CodeIgniter4`, jadi nantinya ketika kita membuat halaman baru kita tidak perlu membuat header dan footernya lagi, kita dapat langsung panggil method `$this->section()` dan `$this->endSection()` 
+
+
+- Tampilkan halaman semua film
 
 # F. Insert Data ke database
 # G. Update dan Delete pada Database
