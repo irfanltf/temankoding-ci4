@@ -345,5 +345,23 @@ maka hasilnya adalah sebagai berikut :
 
 selanjutnya adalah membuat tampilan pada menu semua film
 
+- pada  bagian navbar arahkan menu ke halaman terkait
+
+![navbarr](https://github.com/irfanltf/temankoding-ci4/assets/48278734/ed13ede3-04ce-476d-af15-9c34ee65cb78)
+ 
+> bisa dilihat pada bagian menu beranda di `line ke 10` ada attribute href yang mengarahkan ke root (/) website film kita
+> kemudian pada `line 13` pada attribute href tambahkan valuenya `/film` yang artinya ketika menu diklik akan diarahkan ke controller film method default index
+> pada  `line 16` pada attribute href tambahkan value `/genre` yang artinya akan diarahkan ke controller genre method default index
+> pada  `line 19` pada attribute href tambahkan value `/about` yang artinya akan diarahkan ke controller about method index
+
+
+selanjutnya anda dapat mencoba klik menu pada navbar yang sudah diisi hrefnya, jika sudah berhasil pindah halaman maka navbar sudah berfungsi dengan baik
+
+- buat template layout 
+> template layout ini berfungsi agar kita tidak membuat kode berulang pada view
+> seperti pada bagian header, navbar, dan juga footer yang notabenenya sama pada setiap halaman
+> maka dari itu disini template layout berfungsi agar kode kita lebih dinamis dan juga efektif, karena kita tidak membuat sesuatu yang sama berulang kali, berikut caranya
+> pertama buat folder `layout` lalu buat file dengan nama `layout.php`
+
 # F. Insert Data ke database
 # G. Update dan Delete pada Database
