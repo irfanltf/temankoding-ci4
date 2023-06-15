@@ -552,7 +552,8 @@ selanjutnya anda dapat mencoba klik menu pada navbar yang sudah diisi hrefnya, j
 
 
 >tambahkan strukur halaman pada file `add.php`, kita akan membuat kode html form yang digunakan untuk mengisi data, dan data yang diisi dengan benar akan tersimpan ke database.
->buat tag form dalam tag `div` dengan class `card-body`
+>buat tag form dalam tag `div` dengan class `card-body`, kemudian isi denga inputan yang dibututhkan seperti nama film, genre, duration, dan cover. setiap inputan diberikan name, agar gampang ditelusuri samakan name dengan field yang ada pada database seperti dibawah ini
+![form input](https://github.com/irfanltf/temankoding-ci4/assets/48278734/45936ced-6ea4-4714-b823-d19b659b0f2b)
 
 
 # G. Update dan Delete pada Database
