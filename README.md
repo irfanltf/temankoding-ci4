@@ -555,5 +555,38 @@ selanjutnya anda dapat mencoba klik menu pada navbar yang sudah diisi hrefnya, j
 >buat tag form dalam tag `div` dengan class `card-body`, kemudian isi denga inputan yang dibututhkan seperti nama film, genre, duration, dan cover. setiap inputan diberikan name, agar gampang ditelusuri samakan name dengan field yang ada pada database seperti dibawah ini
 ![form input](https://github.com/irfanltf/temankoding-ci4/assets/48278734/45936ced-6ea4-4714-b823-d19b659b0f2b)
 
+>tampilan halaman tambah data film akan menjadi seperti berikut ini :
+![input](https://github.com/irfanltf/temankoding-ci4/assets/48278734/82c41888-dbe5-46b0-98f0-11493aba71a8)
+
+>selanjutnya kita akan membenarkan pada bagian genre, karna seharusnya yang tampil pada saat inputan genre adalah data genre yang tersedia pada database
+>buka lagi controller `Film` hubungkan ke `ModelGenre` pada bagian yang sudah saya berikan tanda :
+![tambahkan](https://github.com/irfanltf/temankoding-ci4/assets/48278734/27ffb1cd-c156-49ee-9488-04c9b897adfd)
+
+>buka method add tambahkan, panggil data genre dari model, dan kirimkan ke view seperti kode dibawah ini :
+![tambahan](https://github.com/irfanltf/temankoding-ci4/assets/48278734/fa9b19da-6c35-454b-9093-1a23489d6018)
+
+>buka view add, rubah pada bagian inputan select option, tampilkan data genre pada option select menggunakan perulangan 
+![select optin](https://github.com/irfanltf/temankoding-ci4/assets/48278734/dab071c5-c944-4ded-a748-2497b2b8cc76)
+
+>maka inputan genrenya akan tampil seperti berikut ini 
+![select op](https://github.com/irfanltf/temankoding-ci4/assets/48278734/66f05827-6ad2-4de8-ad34-9a3a60d89871)
+
+>selanjutnya kita akan mengatur bagaimana data yang sudah diinputkan bisa diproses untuk disimpan didatabase.
+>arahkan action pada form ke method yang kita inginkan, method ini digunakan untuk memproses data serta menyimpan ke database
+>action kita arahkan ke controller `Film` dan method/function `store` dan metode pengiriman data yang digunakan adalah `POST`
+>lalu karena kita mengirimkan sebuah file maka kita harus atur enctype nya 
+```php
+ <form action="/film/store" method="POST" enctype="multipart/form-data">
+ ```
+
+>selanjutnya buka controller `Film` dan buat method/function `store` lalu tambahkan kode berikut :
+ ![store](https://github.com/irfanltf/temankoding-ci4/assets/48278734/9a29d8fb-dce3-42aa-b7ba-6f431464512f)
+> `line 1` Baris ini mengambil file yang diunggah dengan nama input 'cover' dari permintaan (request) saat ini dan menyimpannya dalam variabel $image.
+> 
+> `line 8` Baris ini mendefinisikan array asosiatif $data yang berisi data yang akan disimpan ke dalam tabel film. Data ini diambil dari permintaan (request) dengan menggunakan metode getPost() untuk mengakses nilai yang dikirimkan melalui input dengan nama yang sesuai.
+> `line 14` Baris ini menyimpan data film ke dalam tabel film menggunakan model film yang telah Anda definisikan sebelumnya.
+> `line 15` Baris ini mengarahkan (redirect) pengguna ke halaman '/film' setelah data film berhasil disimpan. Pengguna akan dialihkan ke halaman yang ditentukan menggunakan fungsi redirect() dari CodeIgniter.
+
+
 
 # G. Update dan Delete pada Database
