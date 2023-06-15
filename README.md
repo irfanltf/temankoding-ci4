@@ -484,5 +484,25 @@ selanjutnya anda dapat mencoba klik menu pada navbar yang sudah diisi hrefnya, j
 
 - Tampilkan halaman semua film
 
+>kita akan menampililkan semua data film namun dalam bentuk table, dan nantinya ditable ini kita akan melakukan proses CURD
+>buka file controller lalu `Film`, kita akan edit method `index`, kita ganti pada `ModelFilm` dengan memanggil method `getAllDataJoin()` seperti gambar dibawah ini :
+
+![contoll](https://github.com/irfanltf/temankoding-ci4/assets/48278734/bae809c3-ba1d-4e14-8966-ff23fcf627c7)
+
+>selanjutnya, pada buka file `index.php` pada folder `film`,  hapus terlebih dahulu semua kodingan yang ada di file `index.php` lalu buat section untuk memanggil template yang sudah kita buat sebelumnya
+
+![content](https://github.com/irfanltf/temankoding-ci4/assets/48278734/871de1a6-e56f-403b-8509-d4bfdaa4350b)
+
+>selanjutnya, didalam section kita akan membuat div dengan class `row` dan juga div dengan class col yang panjang colomnya 12, seperti dibawah ini
+
+![ci](https://github.com/irfanltf/temankoding-ci4/assets/48278734/ec98b1ec-8e59-4f76-8b8c-706ae1d6882f)
+
+>selanjutnya, didalam div dengan class `col-md-12` buat table yang digunakan untuk menampilkan data, jika perhatikan dengna seksama pada tag table ada class `table table-hover`, yang mana class ini merupakan salah satu class dari `bootstrap` yang digunakan untuk membuat style pada table.
+>
+>kemudian tambahkan colom action di table, yang isinya merupakan button yang nantinya akan kita buat sebagai Proses Update dan Delete data filmnya, pada button update dan delete ada class `btn` yang merupakan membaut class dari bootstrap untuk mengatur tampilan button dan ada pula class btn-primary dan btn-danger yang memberi warna pada kedua button tersebut.
+![table](https://github.com/irfanltf/temankoding-ci4/assets/48278734/94527929-05a2-4618-ac23-a49266da5613)
+
+
+
 # F. Insert Data ke database
 # G. Update dan Delete pada Database
