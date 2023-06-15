@@ -588,5 +588,11 @@ selanjutnya anda dapat mencoba klik menu pada navbar yang sudah diisi hrefnya, j
 > `line 18` Baris ini mengarahkan (redirect) pengguna ke halaman '/film' setelah data film berhasil disimpan. Pengguna akan dialihkan ke halaman yang ditentukan menggunakan fungsi redirect() dari CodeIgniter.
 
 
+>buka ModelFilm, lalu isi field apa saja yang ingin diisi pada  properti allowedFields
+```php
+protected $allowedFields      = ['nama_film', 'id_genre', 'duration', 'cover'];
+```
+
+>terakhir buat folder uploads pada folder public yang digunakan untuk menyimpan data gambar pada aplikasi anda
 
 # G. Update dan Delete pada Database
