@@ -518,4 +518,41 @@ selanjutnya anda dapat mencoba klik menu pada navbar yang sudah diisi hrefnya, j
 
 
 # F. Insert Data ke database
+>kita akan mencoba melakukan perintah insert database data film yang berada di halaman semua film. 
+>tambahkan button yang digunakan untuk mengarahkan ke halaman tambah data, tampilannya kira-kira akan menjadi seperti ini
+![button tambah](https://github.com/irfanltf/temankoding-ci4/assets/48278734/0718799e-1f26-4ca9-a034-79196ecadeae)
+
+>pada file `semuafilm.php` di folder `Views/film` kodenya seperti dibawah ini, ubah pada bagian tag div class `card-header` headernya:
+```php
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-6">
+                        <h1>Semua film</h1>
+                    </div>
+                    <div class="col-6 text-end">
+                        <a href="/film/add" class="btn btn-primary">Tambahkan Data Film</a>
+                    </div>
+                </div>
+            </div>
+            
+  ```
+>pada button diatas jika diperhatikan pada bagian href sudah diarahkan ke controller `Film` dan method `add` (/film/add).
+>selanjutnya kita dapat membuat method `add` pada controller `Film`, dan arahkan ke view dengan nama `add.php` yang disimpan pada folder `Views/film`
+
+![add](https://github.com/irfanltf/temankoding-ci4/assets/48278734/b0e6c133-a8b3-4d9d-8e06-2cd35baf7eab)
+
+>namun jika diakses masih error, karena kita belum membuat view `add` dialam folder `Views/film`
+![view add](https://github.com/irfanltf/temankoding-ci4/assets/48278734/2242d69f-14d6-438b-8d66-bc5f4734f4d0)
+
+>buat file view `add.php` pada folder `Views/film` lalu buat struktur template seperti dibawah ini :
+![add kode](https://github.com/irfanltf/temankoding-ci4/assets/48278734/4cd239e6-353a-47a5-85b9-a399060bc5e9)
+
+>lengkapi struktur html menjadi sebagai berikut agar informasinya lebiih jelas
+![lengkap add strruktur](https://github.com/irfanltf/temankoding-ci4/assets/48278734/2424e309-4b5b-49c4-b089-81483e020938)
+
+
+>tambahkan strukur halaman pada file `add.php`, kita akan membuat kode html form yang digunakan untuk mengisi data, dan data yang diisi dengan benar akan tersimpan ke database.
+>buat tag form dalam tag `div` dengan class `card-body`
+
+
 # G. Update dan Delete pada Database
