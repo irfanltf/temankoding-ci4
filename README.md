@@ -502,6 +502,19 @@ selanjutnya anda dapat mencoba klik menu pada navbar yang sudah diisi hrefnya, j
 >kemudian tambahkan colom action di table, yang isinya merupakan button yang nantinya akan kita buat sebagai Proses Update dan Delete data filmnya, pada button update dan delete ada class `btn` yang merupakan membaut class dari bootstrap untuk mengatur tampilan button dan ada pula class btn-primary dan btn-danger yang memberi warna pada kedua button tersebut.
 ![table](https://github.com/irfanltf/temankoding-ci4/assets/48278734/94527929-05a2-4618-ac23-a49266da5613)
 
+>hasil akhir kodingan pada file `index.php` menjadi seperti ini :
+![hasil akhir](https://github.com/irfanltf/temankoding-ci4/assets/48278734/3a2ae13c-b680-4de9-8067-65135584fbb6)
+
+>hasilnya akan menjadi seperti berikut ini :
+![layar kecel](https://github.com/irfanltf/temankoding-ci4/assets/48278734/43a173aa-7c50-49ab-808a-005b620b122d)
+
+>silahkan buat juga style pada genre dan tentang kami serta tampilkan halamannya menjadi sseperti dibawah ini :
+
+>Tampilan Halaman Genre Film
+![genre](https://github.com/irfanltf/temankoding-ci4/assets/48278734/fd8f1ed8-49da-4f94-99ee-b45c49053cbb)
+
+>Tampilan Halaman Tentang Kami
+![tentang kami](https://github.com/irfanltf/temankoding-ci4/assets/48278734/2f17a1a9-cfbe-43f6-8159-2f08edb08d35)
 
 
 # F. Insert Data ke database
