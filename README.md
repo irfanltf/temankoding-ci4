@@ -581,11 +581,11 @@ selanjutnya anda dapat mencoba klik menu pada navbar yang sudah diisi hrefnya, j
 
 >selanjutnya buka controller `Film` dan buat method/function `store` lalu tambahkan kode berikut :
  ![store](https://github.com/irfanltf/temankoding-ci4/assets/48278734/9a29d8fb-dce3-42aa-b7ba-6f431464512f)
-> `line 1` Baris ini mengambil file yang diunggah dengan nama input 'cover' dari permintaan (request) saat ini dan menyimpannya dalam variabel $image.
+> `line 4 Baris ini mengambil file yang diunggah dengan nama input 'cover' dari permintaan (request) saat ini dan menyimpannya dalam variabel $image.
 > 
-> `line 8` Baris ini mendefinisikan array asosiatif $data yang berisi data yang akan disimpan ke dalam tabel film. Data ini diambil dari permintaan (request) dengan menggunakan metode getPost() untuk mengakses nilai yang dikirimkan melalui input dengan nama yang sesuai.
-> `line 14` Baris ini menyimpan data film ke dalam tabel film menggunakan model film yang telah Anda definisikan sebelumnya.
-> `line 15` Baris ini mengarahkan (redirect) pengguna ke halaman '/film' setelah data film berhasil disimpan. Pengguna akan dialihkan ke halaman yang ditentukan menggunakan fungsi redirect() dari CodeIgniter.
+> `line 11Baris ini mendefinisikan array asosiatif $data yang berisi data yang akan disimpan ke dalam tabel film. Data ini diambil dari permintaan (request) dengan menggunakan metode getPost() untuk mengakses nilai yang dikirimkan melalui input dengan nama yang sesuai.
+> `line 17` Baris ini menyimpan data film ke dalam tabel film menggunakan model film yang telah Anda definisikan sebelumnya.
+> `line 18` Baris ini mengarahkan (redirect) pengguna ke halaman '/film' setelah data film berhasil disimpan. Pengguna akan dialihkan ke halaman yang ditentukan menggunakan fungsi redirect() dari CodeIgniter.
 
 
 
