@@ -506,21 +506,25 @@ selanjutnya anda dapat mencoba klik menu pada navbar yang sudah diisi hrefnya, j
 ![hasil akhir](https://github.com/irfanltf/temankoding-ci4/assets/48278734/3a2ae13c-b680-4de9-8067-65135584fbb6)
 
 >hasilnya akan menjadi seperti berikut ini :
-![layar kecel](https://github.com/irfanltf/temankoding-ci4/assets/48278734/43a173aa-7c50-49ab-808a-005b620b122d)
+![layar kecel](https://github.com/irfanltf/temankoding-ci4/assets/48278734/c1af4fb8-2de2-434c-aefa-3e2de241d939)
 
 >silahkan buat juga style pada genre dan tentang kami serta tampilkan halamannya menjadi sseperti dibawah ini :
 
 >Tampilan Halaman Genre Film
-![genre](https://github.com/irfanltf/temankoding-ci4/assets/48278734/fd8f1ed8-49da-4f94-99ee-b45c49053cbb)
+![genre](https://github.com/irfanltf/temankoding-ci4/assets/48278734/53dff214-3181-43a6-9f3c-499eedda62f8)
+
 
 >Tampilan Halaman Tentang Kami
-![tentang kami](https://github.com/irfanltf/temankoding-ci4/assets/48278734/2f17a1a9-cfbe-43f6-8159-2f08edb08d35)
+![tentang kami](https://github.com/irfanltf/temankoding-ci4/assets/48278734/07fd4b0e-9587-4070-b9f9-d30e92b21259)
+
 
 
 # F. Insert Data ke database
 >kita akan mencoba melakukan perintah insert database data film yang berada di halaman semua film. 
 >tambahkan button yang digunakan untuk mengarahkan ke halaman tambah data, tampilannya kira-kira akan menjadi seperti ini
-![button tambah](https://github.com/irfanltf/temankoding-ci4/assets/48278734/0718799e-1f26-4ca9-a034-79196ecadeae)
+![button tambah](https://github.com/irfanltf/temankoding-ci4/assets/48278734/bcab3eef-9159-4959-884e-cbe767bd0139)
+
+
 
 >pada file `semuafilm.php` di folder `Views/film` kodenya seperti dibawah ini, ubah pada bagian tag div class `card-header` headernya:
 ```php
