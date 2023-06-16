@@ -476,7 +476,7 @@ selanjutnya anda dapat mencoba klik menu pada navbar yang sudah diisi hrefnya, j
 
 > ada juga method section dibagian atas dan juga endsection dibawgian bawah, jadi sesuatu yang berada diantara section dan endsection akan dirender kedalam template layout
 
-![hasilnya](https://github.com/irfanltf/temankoding-ci4/assets/48278734/db684452-6755-4d72-96dc-b4b7a98cceb8)
+![hasilnya](https://github.com/irfanltf/temankoding-ci4/assets/48278734/0704c411-ca5a-4cc9-9492-a8b8c96a6c11)
 
 
 >jika kita tampilkan hasilnya akan tetap sama, namun kita sudah mengimpelentasikan template layout dari `CodeIgniter4`, jadi nantinya ketika kita membuat halaman baru kita tidak perlu membuat header dan footernya lagi, kita dapat langsung panggil method `$this->section()` dan `$this->endSection()` 
@@ -486,16 +486,16 @@ selanjutnya anda dapat mencoba klik menu pada navbar yang sudah diisi hrefnya, j
 
 >kita akan menampililkan semua data film namun dalam bentuk table, dan nantinya ditable ini kita akan melakukan proses CURD
 >buka file controller lalu `Film`, kita akan edit method `index`, kita ganti pada `ModelFilm` dengan memanggil method `getAllDataJoin()` seperti gambar dibawah ini :
+![contoll](https://github.com/irfanltf/temankoding-ci4/assets/48278734/e69039f4-0395-403d-9506-298cdf6f6a66)
 
-![contoll](https://github.com/irfanltf/temankoding-ci4/assets/48278734/bae809c3-ba1d-4e14-8966-ff23fcf627c7)
 
 >selanjutnya, pada buka file `index.php` pada folder `film`,  hapus terlebih dahulu semua kodingan yang ada di file `index.php` lalu buat section untuk memanggil template yang sudah kita buat sebelumnya
+![content](https://github.com/irfanltf/temankoding-ci4/assets/48278734/e84e1b21-2721-4cf9-916f-7824e9a998ca)
 
-![content](https://github.com/irfanltf/temankoding-ci4/assets/48278734/871de1a6-e56f-403b-8509-d4bfdaa4350b)
 
 >selanjutnya, didalam section kita akan membuat div dengan class `row` dan juga div dengan class col yang panjang colomnya 12, seperti dibawah ini
+![ci](https://github.com/irfanltf/temankoding-ci4/assets/48278734/c9e7a0ca-5518-45f9-9075-e221056e28c1)
 
-![ci](https://github.com/irfanltf/temankoding-ci4/assets/48278734/ec98b1ec-8e59-4f76-8b8c-706ae1d6882f)
 
 >selanjutnya, didalam div dengan class `col-md-12` buat table yang digunakan untuk menampilkan data, jika perhatikan dengna seksama pada tag table ada class `table table-hover`, yang mana class ini merupakan salah satu class dari `bootstrap` yang digunakan untuk membuat style pada table.
 >
@@ -590,12 +590,14 @@ selanjutnya anda dapat mencoba klik menu pada navbar yang sudah diisi hrefnya, j
  ```
 
 >selanjutnya buka controller `Film` dan buat method/function `store` lalu tambahkan kode berikut :
-![store](https://github.com/irfanltf/temankoding-ci4/assets/48278734/513cc1a1-e0ae-4b1f-b875-3042a1757f85)
+![store](https://github.com/irfanltf/temankoding-ci4/assets/48278734/dd6496dc-5dc1-400c-a053-e336bc25f20b)
 
 > `line 4 Baris ini mengambil file yang diunggah dengan nama input 'cover' dari permintaan (request) saat ini dan menyimpannya dalam variabel $image.
 > 
-> `line 11Baris ini mendefinisikan array asosiatif $data yang berisi data yang akan disimpan ke dalam tabel film. Data ini diambil dari permintaan (request) dengan menggunakan metode getPost() untuk mengakses nilai yang dikirimkan melalui input dengan nama yang sesuai.
+> `line 11` Baris ini mendefinisikan array asosiatif $data yang berisi data yang akan disimpan ke dalam tabel film. Data ini diambil dari permintaan (request) dengan menggunakan metode getPost() untuk mengakses nilai yang dikirimkan melalui input dengan nama yang sesuai.
+> 
 > `line 17` Baris ini menyimpan data film ke dalam tabel film menggunakan model film yang telah Anda definisikan sebelumnya.
+> 
 > `line 18` Baris ini mengarahkan (redirect) pengguna ke halaman '/film' setelah data film berhasil disimpan. Pengguna akan dialihkan ke halaman yang ditentukan menggunakan fungsi redirect() dari CodeIgniter.
 
 
