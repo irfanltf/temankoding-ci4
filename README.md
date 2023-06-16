@@ -539,37 +539,43 @@ selanjutnya anda dapat mencoba klik menu pada navbar yang sudah diisi hrefnya, j
 >pada button diatas jika diperhatikan pada bagian href sudah diarahkan ke controller `Film` dan method `add` (/film/add).
 >selanjutnya kita dapat membuat method `add` pada controller `Film`, dan arahkan ke view dengan nama `add.php` yang disimpan pada folder `Views/film`
 
-![add](https://github.com/irfanltf/temankoding-ci4/assets/48278734/b0e6c133-a8b3-4d9d-8e06-2cd35baf7eab)
+![add](https://github.com/irfanltf/temankoding-ci4/assets/48278734/022dd014-8525-4417-9781-b3887134cbe3)
+
 
 >namun jika diakses masih error, karena kita belum membuat view `add` dialam folder `Views/film`
-![view add](https://github.com/irfanltf/temankoding-ci4/assets/48278734/2242d69f-14d6-438b-8d66-bc5f4734f4d0)
+![view add](https://github.com/irfanltf/temankoding-ci4/assets/48278734/e61366ce-8dd4-4796-af24-9f4b1fa654d6)
+
 
 >buat file view `add.php` pada folder `Views/film` lalu buat struktur template seperti dibawah ini :
-![add kode](https://github.com/irfanltf/temankoding-ci4/assets/48278734/4cd239e6-353a-47a5-85b9-a399060bc5e9)
+![add kode](https://github.com/irfanltf/temankoding-ci4/assets/48278734/241214af-9d62-4a0d-9e26-e1399242dda7)
+
 
 >lengkapi struktur html menjadi sebagai berikut agar informasinya lebiih jelas
-![lengkap add strruktur](https://github.com/irfanltf/temankoding-ci4/assets/48278734/2424e309-4b5b-49c4-b089-81483e020938)
+![lengkap add strruktur](https://github.com/irfanltf/temankoding-ci4/assets/48278734/d4912ef0-8898-4efa-96d5-549e17799c37)
+
 
 
 >tambahkan strukur halaman pada file `add.php`, kita akan membuat kode html form yang digunakan untuk mengisi data, dan data yang diisi dengan benar akan tersimpan ke database.
 >buat tag form dalam tag `div` dengan class `card-body`, kemudian isi denga inputan yang dibututhkan seperti nama film, genre, duration, dan cover. setiap inputan diberikan name, agar gampang ditelusuri samakan name dengan field yang ada pada database seperti dibawah ini
-![form input](https://github.com/irfanltf/temankoding-ci4/assets/48278734/45936ced-6ea4-4714-b823-d19b659b0f2b)
+![form input](https://github.com/irfanltf/temankoding-ci4/assets/48278734/eefe8773-a329-4095-bbfd-590406f46064)
 
 >tampilan halaman tambah data film akan menjadi seperti berikut ini :
-![input](https://github.com/irfanltf/temankoding-ci4/assets/48278734/82c41888-dbe5-46b0-98f0-11493aba71a8)
+![input](https://github.com/irfanltf/temankoding-ci4/assets/48278734/1e0c2282-906b-424d-94e8-89168d1f8574)
 
 >selanjutnya kita akan membenarkan pada bagian genre, karna seharusnya yang tampil pada saat inputan genre adalah data genre yang tersedia pada database
 >buka lagi controller `Film` hubungkan ke `ModelGenre` pada bagian yang sudah saya berikan tanda :
-![tambahkan](https://github.com/irfanltf/temankoding-ci4/assets/48278734/27ffb1cd-c156-49ee-9488-04c9b897adfd)
+![tambahkan](https://github.com/irfanltf/temankoding-ci4/assets/48278734/b30069b5-9d95-4da4-a925-ff0611c5179c)
 
 >buka method add tambahkan, panggil data genre dari model, dan kirimkan ke view seperti kode dibawah ini :
-![tambahan](https://github.com/irfanltf/temankoding-ci4/assets/48278734/fa9b19da-6c35-454b-9093-1a23489d6018)
+![tambahan](https://github.com/irfanltf/temankoding-ci4/assets/48278734/3d40d4f4-d42a-49d2-990d-1c918e22b9bb)
 
 >buka view add, rubah pada bagian inputan select option, tampilkan data genre pada option select menggunakan perulangan 
-![select optin](https://github.com/irfanltf/temankoding-ci4/assets/48278734/dab071c5-c944-4ded-a748-2497b2b8cc76)
+![select optin](https://github.com/irfanltf/temankoding-ci4/assets/48278734/73b5a9eb-25fa-44f8-a8bd-c0a24ddbcb21)
+
 
 >maka inputan genrenya akan tampil seperti berikut ini 
-![select op](https://github.com/irfanltf/temankoding-ci4/assets/48278734/66f05827-6ad2-4de8-ad34-9a3a60d89871)
+![select op](https://github.com/irfanltf/temankoding-ci4/assets/48278734/b1eefb84-706a-40d2-bf46-7f12550b5a33)
+
 
 >selanjutnya kita akan mengatur bagaimana data yang sudah diinputkan bisa diproses untuk disimpan didatabase.
 >arahkan action pada form ke method yang kita inginkan, method ini digunakan untuk memproses data serta menyimpan ke database
@@ -580,7 +586,8 @@ selanjutnya anda dapat mencoba klik menu pada navbar yang sudah diisi hrefnya, j
  ```
 
 >selanjutnya buka controller `Film` dan buat method/function `store` lalu tambahkan kode berikut :
- ![store](https://github.com/irfanltf/temankoding-ci4/assets/48278734/9a29d8fb-dce3-42aa-b7ba-6f431464512f)
+![store](https://github.com/irfanltf/temankoding-ci4/assets/48278734/513cc1a1-e0ae-4b1f-b875-3042a1757f85)
+
 > `line 4 Baris ini mengambil file yang diunggah dengan nama input 'cover' dari permintaan (request) saat ini dan menyimpannya dalam variabel $image.
 > 
 > `line 11Baris ini mendefinisikan array asosiatif $data yang berisi data yang akan disimpan ke dalam tabel film. Data ini diambil dari permintaan (request) dengan menggunakan metode getPost() untuk mengakses nilai yang dikirimkan melalui input dengan nama yang sesuai.
