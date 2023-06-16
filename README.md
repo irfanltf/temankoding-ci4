@@ -346,8 +346,8 @@ maka hasilnya adalah sebagai berikut :
 selanjutnya adalah membuat tampilan pada menu semua film
 
 - pada  bagian navbar arahkan menu ke halaman terkait
+![navbarr](https://github.com/irfanltf/temankoding-ci4/assets/48278734/66523391-08d0-4822-b62c-975e64ed3df8)
 
-![navbarr](https://github.com/irfanltf/temankoding-ci4/assets/48278734/ed13ede3-04ce-476d-af15-9c34ee65cb78)
  
 > bisa dilihat pada bagian menu beranda di `line ke 10` ada attribute href yang mengarahkan ke root (/) website film kita
 > kemudian pada `line 13` pada attribute href tambahkan valuenya `/film` yang artinya ketika menu diklik akan diarahkan ke controller film method default index
@@ -606,6 +606,20 @@ selanjutnya anda dapat mencoba klik menu pada navbar yang sudah diisi hrefnya, j
 protected $allowedFields      = ['nama_film', 'id_genre', 'duration', 'cover'];
 ```
 
->terakhir buat folder uploads pada folder public yang digunakan untuk menyimpan data gambar pada aplikasi anda
+>terakhi tes input data dan klik tombol simpan, dan cek apakah data yang diinput berhasil tersimpan didatabase
+>![berhasi;](https://github.com/irfanltf/temankoding-ci4/assets/48278734/c2eebb90-092d-4218-b81b-a8acf08b9336)
+
+
+
+>kita memang sudah berhasil menginputkan data ke database, namun jika lebih ditelisik lebih jauh aplikasi kita masih terbilang garing, dan juga dari segi kemanan aplikasi kita masih belum baik, untuk itu kita akan  lakukan perbaikan pada aplikasi kita diantaranya kita akan menambahkan
+- Form Validation
+saat melakukan proses input kita akan validasi terlebih dahulu data yang dikirim sebelum dapat disimpan oleh database, jika data tidak valid maka user akan diminta untuk memasukan data dengan benar, dan jika data valid maka data dapat disimpan pada di database
+- Sweet Alert
+saat proses penyimpanan data berhasil saat ini tidak ada informasi yang menandakan bahwa proses penyimpanan berhasil, hal ini menjadikan aplikasi kita kurang informatif, jika dapat menambahkan sebuah alert keberhasilan mengguakan sweet alert
+
+***Let's Code!***
+
+- Menambahkan Form validation
+>
 
 # G. Update dan Delete pada Database
