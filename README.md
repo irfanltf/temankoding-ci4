@@ -620,6 +620,76 @@ saat proses penyimpanan data berhasil saat ini tidak ada informasi yang menandak
 ***Let's Code!***
 
 - Menambahkan Form validation
->
+> pergi ke halaman view add.php, kemudian edit setiap inputan menjadi seperti dibawah ini, dengan menambahkan form invalid bootsrtap jika datanya tidak valid
+![invaliud](https://github.com/irfanltf/temankoding-ci4/assets/48278734/0e711427-8348-42a7-997d-50ed6c30438a)
+
+
+> caranya adalah sebagai berikut, pertama pergi ke dokumentasi dari bootstrap, dan cari bagian validation pada form
+![bootstrap invalid](https://github.com/irfanltf/temankoding-ci4/assets/48278734/cef271f8-330f-47a4-9dd2-04ad817dd821)
+
+> adobsi pada bootstrap dan ubah menjadi seperti dibawah ini :
+```php
+<form action="/film/store" method="POST" enctype="multipart/form-data">
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <label for="nama_film" class="form-label">Nama Film</label>
+                            <input type="text" class="form-control <?= isset($errors['nama_film']) ? 'is-invalid ' : ''; ?>" id="nama_film" name="nama_film" value="<?= old('nama_film'); ?>">
+                            <?php if (isset($errors['nama_film'])) : ?>
+                                <div class="invalid-feedback">
+                                    <?= $errors['nama_film'] ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="genre" class="form-label">Genre</label>
+                            <select name="id_genre" id="genre" class="form-control <?= isset($errors['id_genre']) ? 'is-invalid ' : ''; ?>" name="id_genre" value="<?= old('id_genre'); ?>">
+                                <option value="">PILIH..</option>
+                                <?php foreach ($genre as $g) : ?>
+                                    <option value="<?= $g["id"] ?>"><?= $g["nama_genre"] ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                            <?php if (isset($errors['id_genre'])) : ?>
+                                <div class="invalid-feedback">
+                                    <?= $errors['id_genre'] ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="duration" class="form-label">Durasi</label>
+                            <input type="text" class="form-control <?= isset($errors['duration']) ? 'is-invalid ' : ''; ?>" id="duration" name="duration" value=" <?= old('duration'); ?>">
+                            <?php if (isset($errors['duration'])) : ?>
+                                <div class=" invalid-feedback">
+                                    <?= $errors['duration'] ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="cover" class="form-label">Cover</label>
+                            <input type="file" class="form-control <?= isset($errors['cover']) ? 'is-invalid' : ''; ?>" id="cover" name="cover" value="<?= old('cover'); ?>">
+                            <?php if (isset($errors['cover'])) : ?>
+                                <div class="invalid-feedback">
+                                    <?= $errors['cover'] ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-primary mt-5">Simpan</button>
+                        </div>
+                    </div>
+                </form>
+```
+
+> jika anda telaah, form diatas saat ini mempunyai class invalid, saat ada variable errors namun jika tidak ada, class invalid akan hilang, variable errors diambil dari data yang anda masukan, jika data valid maka tidak akan ada variable errors, namun jika data tidak valid maka variable errors akan muncul, dan pesan error akan ditampilkan, maka dari itu kita tidak akan bisa submit data kita sebelum errornya selesai atau datanya valid.
+> 
+> selanjutnya pergi ke controller `Film` tambahkan variable errors yang diambil dari session seperti dibawah ini pada method add
+![aaa](https://github.com/irfanltf/temankoding-ci4/assets/48278734/73054fbe-00b4-4250-83d9-9662b45be7ac)
+
+>pada method store() ubah isinya menjadi seperti dibawah ini :
+![storenya](https://github.com/irfanltf/temankoding-ci4/assets/48278734/72f660e9-96c4-4722-ba80-d7ad0243b674)
+> pada method store saat ini sudah ditambahkan proses validation, jika validation berhasil, data akan disimpan namun jika gagal akan ditampilkan lagi halaman input data film dengan error
+> proses validasi sudah dapat anda coba
 
 # G. Update dan Delete pada Database
