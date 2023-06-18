@@ -692,4 +692,112 @@ saat proses penyimpanan data berhasil saat ini tidak ada informasi yang menandak
 > pada method store saat ini sudah ditambahkan proses validation, jika validation berhasil, data akan disimpan namun jika gagal akan ditampilkan lagi halaman input data film dengan error
 > proses validasi sudah dapat anda coba
 
+- Menambahkan Sweet Alert
+
+> SweetAlert merupakan sebuah library JavaScript yang digunakan untuk membuat pesan pop-up yang menarik dan interaktif. Dengan SweetAlert, Anda dapat membuat dialog konfirmasi, pesan sukses, pesan error, dan berbagai jenis pesan lainnya dengan tampilan yang lebih menarik daripada pesan pop-up standar yang disediakan oleh browser.
+> untuk menggunakan Sweet Alert Anda dapat mengunjungi situs resmi SweetAlert di https://sweetalert.js.org/ Di situs tersebut, Anda dapat menemukan tautan untuk mengunduh versi terbaru dari SweetAlert.
+> pada website sweetalert anda dapat, peri ke bagian guides kemudian  pilih tab installation, anda dapat mengcopy script js dari sweetalert yang disimpan pada cdn,![kodes](https://github.com/irfanltf/temankoding-ci4/assets/48278734/e7f98f92-9daa-46e5-8fec-c82df5eeb430)
+
+![sweetalert](https://github.com/irfanltf/temankoding-ci4/assets/48278734/2c1fa8ff-fa3b-4a8f-bed0-86b2062d8bdf)
+
+> ataupun anda dapat membuka link srcnya pada address bar browser anda, jika ingin menyimpan script sweetalert ke server anda
+![copy](https://github.com/irfanltf/temankoding-ci4/assets/48278734/3dc8490f-ad82-44dc-aa89-12d0b7c657ad)
+>maka akan terbuka, scriptnya dapat anda simpan pada folder project anda
+![kodes](https://github.com/irfanltf/temankoding-ci4/assets/48278734/d2c1a15e-9e4e-4988-a1f2-a904ab303d49)
+
+>untuk panduan kali ini, akan kita simpan pada folder js di folder public>assets
+![simpan](https://github.com/irfanltf/temankoding-ci4/assets/48278734/abbbb55f-83a8-4710-8f2e-e1464c712d6f
+
+>sehingga sekarang anda dapat menambahkan sciprt nya pada bagian head html di file template layout.php
+
+```html
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layar Kaca 8080</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <script src="/assets/js/unpkg.com_sweetalert@2.1.2_dist_sweetalert.min.js"></script> <!-- tambahkan ini -->
+</head>
+```
+
+
+>kemudian pada tambahkan script untuk memanggil sweet alertnya, namun berikan kondisi, alert akan ditampilkan saat ada session success yang akan kita kirim pada controller
+>tambahkan script untuk memanggil sweet alert, letakan pada sebelum tutup tag body pada template layout.php
+```php
+    <?php if (session()->getFlashdata('success')) : ?>
+        <script>
+            swal({
+                title: "Informasi",
+                text: "<?= session()->getFlashdata('success') ?>",
+                icon: "success",
+                button: "OK",
+            });
+        </script>
+
+    <?php endif; ?>
+```
+
+
+terakhir pada controller set session jika validasi berhasil sebelum redirect ke halaman semua film, seperti dibawah ini, tambahkan set session pada method store
+
+```php
+public function store()
+    {
+        $validation = $this->validate([
+            'nama_film' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Kolom Nama Film Harus diisi'
+                ]
+            ],
+            'id_genre'  => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Kolom Genre Harus diisi'
+                ]
+            ],
+            'duration'  => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Kolom Durasi Harus diisi'
+                ]
+            ],
+            'cover'     => [
+                'rules' => 'uploaded[cover]|mime_in[cover,image/jpg,image/jpeg,image/png]|max_size[cover,2048]',
+                'errors' => [
+                    'uploaded' => 'Kolom Cover harus berisi file.',
+                    'mime_in' => 'Tipe file pada Kolom Cover harus berupa JPG, JPEG, atau PNG',
+                    'max_size' => 'Ukuran file pada Kolom Cover melebihi batas maksimum'
+                ]
+            ]
+        ]);
+
+        if (!$validation) {
+            $errors = \Config\Services::validation()->getErrors();
+
+            return redirect()->back()->withInput()->with('errors', $errors);
+        }
+        $image = $this->request->getFile('cover');
+        $imageName = $image->getRandomName();
+        $image->move(ROOTPATH . 'public/assets/cover/', $imageName);
+
+        $data = [
+            'nama_film' => $this->request->getPost('nama_film'),
+            'id_genre' => $this->request->getPost('id_genre'),
+            'duration' => $this->request->getPost('duration'),
+            'cover' => $imageName,
+        ];
+        $this->film->save($data);
+        session()->setFlashdata('success', 'Data berhasil disimpan.'); // tambahkan ini
+        return redirect()->to('/film');
+    }
+    ```
+
+
+> jika kita coba tambahkan data lagi maka, hasilnya akan seperti ini :
+![berhasil](https://github.com/irfanltf/temankoding-ci4/assets/48278734/4eedb7f8-6716-4b91-9381-65ccf6dccedb)
+
 # G. Update dan Delete pada Database
