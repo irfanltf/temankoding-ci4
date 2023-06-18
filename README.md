@@ -794,7 +794,8 @@ public function store()
         session()->setFlashdata('success', 'Data berhasil disimpan.'); // tambahkan ini
         return redirect()->to('/film');
     }
-    ```
+  
+  ```
 
 
 > jika kita coba tambahkan data lagi maka, hasilnya akan seperti ini :
