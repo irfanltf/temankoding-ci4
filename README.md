@@ -817,5 +817,21 @@ public function store()
 > selanjutnyaa jika klik tombol update pada halaman semua film kita, maka belum ada sesuatu hal yang terjadi karena kita belum membuat method `update` pada controller `Film`
 ![image](https://github.com/irfanltf/temankoding-ci4/assets/48278734/e28d5145-1d27-4a3b-b509-ed77eeeb3f8c)
 
-> selanjutnya buat method update pada controller Film yang menampilkan halaman ubah data film, arahkan ke view edit.php, letakan pada folder film, dan kirim data film berdasarkan id yang dikikirim, dan juga data genre
+> selanjutnya buat method update pada controller Film yang menampilkan halaman ubah data film, arahkan ke view edit.php, letakan pada folder film, dan kirim data film berdasarkan id yang diterima, data genre dan session errornya seperti dibawah ini :
+![update](https://github.com/irfanltf/temankoding-ci4/assets/48278734/3e7279f2-da54-4c72-8cd2-851ab0833305)
+
+> kemudian buat view `edit.php` pada folder `film` lalu buka file `add.php` copy semua isinya lalu paste kan pada file `edit.php`, kemudian edit isinya jadi seperti berikut ini :
+![tak segampang itu](https://github.com/irfanltf/temankoding-ci4/assets/48278734/c2027e83-058b-428b-8b94-5de713b7b0d9)
+
+> jangan lupa pada method attribute form ubah arah nya ke /film/edit
+```php
+  <form action="/film/edit" method="POST" enctype="multipart/form-data">
+```
+> buka controller Film tambahkan method edit, isinya copy saja dari method store namun ubah beberapa hal menjadi seperti dibawah ini :
+![edit](https://github.com/irfanltf/temankoding-ci4/assets/48278734/73d4df0d-9e9c-44f1-8260-cb4c2ca803ae)
+
+
+>maka anda sudah bisa mencobanya, dan hasilnya ketika berhasil memperbarui adalah
+![Screenshot 2023-06-19 171941](https://github.com/irfanltf/temankoding-ci4/assets/48278734/01a931d1-3edb-420f-9066-3a845f695031)
+
 
