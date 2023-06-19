@@ -802,3 +802,20 @@ public function store()
 ![berhasil](https://github.com/irfanltf/temankoding-ci4/assets/48278734/4eedb7f8-6716-4b91-9381-65ccf6dccedb)
 
 # G. Update dan Delete pada Database
+> selanjutnya kita akan mengaktifkan tombol update pada halaman semua film berikut ini, yang akan kita arahkan ke halaman ubah
+![image](https://github.com/irfanltf/temankoding-ci4/assets/48278734/265f88ee-d24d-4414-81bb-b419866091af)
+
+> bua view pada halaman sebua film, nama view nya disini saya menyimpan dengan nama `index.php` pada folder `film` pada Views
+```php
+<td>
+     <a href="/film/update/<?= $film["id"]; ?>" class="btn btn-success">Update</a>
+     <a href="" class="btn btn-danger">Delete</a>
+</td>
+```
+
+
+> selanjutnyaa jika klik tombol update pada halaman semua film kita, maka belum ada sesuatu hal yang terjadi karena kita belum membuat method `update` pada controller `Film`
+![image](https://github.com/irfanltf/temankoding-ci4/assets/48278734/e28d5145-1d27-4a3b-b509-ed77eeeb3f8c)
+
+> selanjutnya buat method update pada controller Film yang menampilkan halaman ubah data film, arahkan ke view edit.php, letakan pada folder film, dan kirim data film berdasarkan id yang dikikirim, dan juga data genre
+
