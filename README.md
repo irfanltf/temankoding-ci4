@@ -973,7 +973,12 @@ dan destroy menjadi seperti ini :
     {
         $decryptedId = decryptUrl($id);
         $this->film->delete($decryptedId);
-        session()->setFlashdata('success', 'Data berhasil dihapus.');
+        session()->setFlashdata('success', 'Data berhasil dihapus.');![a](https://github.com/irfanltf/temankoding-ci4/assets/48278734/c50de6cb-d940-4119-b87c-50a08d258143)
+
         return redirect()->to('/film');
     }
 ```
+
+hasilnya sebagai berikut, sekarang id tidak bisa dilihat 
+![image](https://github.com/irfanltf/temankoding-ci4/assets/48278734/2ca70797-f352-4dd4-877a-3591b5714ec6)
+
