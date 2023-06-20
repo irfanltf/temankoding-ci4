@@ -802,6 +802,7 @@ public function store()
 ![berhasil](https://github.com/irfanltf/temankoding-ci4/assets/48278734/4eedb7f8-6716-4b91-9381-65ccf6dccedb)
 
 # G. Update dan Delete pada Database
+- Update Data
 > selanjutnya kita akan mengaktifkan tombol update pada halaman semua film berikut ini, yang akan kita arahkan ke halaman ubah
 ![image](https://github.com/irfanltf/temankoding-ci4/assets/48278734/265f88ee-d24d-4414-81bb-b419866091af)
 
@@ -833,5 +834,50 @@ public function store()
 
 >maka anda sudah bisa mencobanya, dan hasilnya ketika berhasil memperbarui adalah
 ![Screenshot 2023-06-19 171941](https://github.com/irfanltf/temankoding-ci4/assets/48278734/01a931d1-3edb-420f-9066-3a845f695031)
+
+- Delete Data
+> ubah kembali file `index.php` pada view di folder film, tambahkan action onclick pada tombol delete, yang isinya mereturn function confirmDelete, di function tersebut nantinya kita akan membuat sebuah alert confirm apakah data benar-benar akan dihapus atau tidak
+```php
+ <td>
+       <a href="/film/update/<?= $film["id"]; ?>" class="btn btn-success">Update</a>
+      <a class="btn btn-danger" onclick="return confirmDelete()">Delete</a>
+</td>
+ ```
+
+>selanjutnya kita buat function confirmDelete javascriptnya seperti dibawah ini :
+
+>letakan setelah akhir tutup div, dan sebelum endsection
+```javascript
+<!-- tambahkan dari sini  -->
+<script>
+    function confirmDelete() {
+        swal({
+                title: "Apakah Anda yakin?",
+                text: "setelah dihapus! data anda akan benar-benar hilang!",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((willDelete) => {
+                if (willDelete) {
+
+                    window.location.href = "/film/destroy/<?= $film['id'] ?>";
+
+                } else {
+                    swal("Data tidak jadi dihapus!");
+                }
+            });
+    }
+</script>
+  <!-- sampai sini -->
+<?= $this->endSection() ?>
+  ```
+
+
+> selanjutnya kita akan membuat method `destroy` yang menerima parameter id pada controller `Film`
+![destroy](https://github.com/irfanltf/temankoding-ci4/assets/48278734/be13b4b4-130d-4a5a-90bb-bb79913297f9)
+
+
+>terakhir, anda bisa mencoba menghapus 1 data, dan amati apa yang terjadi
 
 
