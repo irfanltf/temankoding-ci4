@@ -6,6 +6,7 @@
 * [Membuat Tampilan Menarik Menggunakan Bootstrap (13)](#e-membuat-tampilan-menarik-menggunakan-bootstrap)
 * [Insert Data ke database (14)](#f-insert-data-ke-database)
 * [Update dan Delete pada Database (15)](#g-update-dan-delete-pada-database)
+* [Kemanan URL (15)](#h-keamanan-url)
 
 
 
@@ -881,3 +882,98 @@ public function store()
 >terakhir, anda bisa mencoba menghapus 1 data, dan amati apa yang terjadi
 
 
+# H. Keamanan URL
+
+> saat ini jika anda melihat url anda saat berpindah dari halaman utama ke halaman edit, disana terlihat jelas id nya pada URL
+![id](https://github.com/irfanltf/temankoding-ci4/assets/48278734/146dff66-bb82-4602-a7cb-c90a981b6af7)
+
+> hal demikian sangatlah tidak baik untuk program kita, hal ini dinamakan dengan Insecure Direct Object References (IDOR). IDOR terjadi ketika aplikasi web tidak menerapkan validasi atau kontrol yang memadai saat mengakses objek atau sumber daya berdasarkan ID atau parameter yang diberikan dalam URL. Hal ini dapat memungkinkan pengguna yang tidak sah untuk memanipulasi ID atau parameter dalam URL dan mengakses objek yang seharusnya tidak mereka akses.
+>
+> Contoh IDOR dapat terjadi dalam skenario di mana aplikasi web memiliki URL yang mengandung ID objek, seperti /edit/123 untuk menampilkan detail pengguna dengan ID 123. Jika tidak ada kontrol yang memadai, pengguna yang tidak sah dapat mencoba mengganti ID menjadi ID lain untuk mengakses data pengguna lain, termasuk data yang tidak seharusnya mereka akses.
+>
+> duntuk mencegal hal tersebut ada beberapa validasi yang dapat kita lakukan, salah satunya dengan mengubah id menjadi random sring, sehingga sehingga seseorang tidak secara gampang mengubah id pada URL
+> 
+> pertama kita akan memanfaatkan helpers pada CI4 kita, yang akan menyimpan function encript dan decript random string kita
+>
+> buka helpers lalu tambahkan file dengan nama url_helper.php, lalu isinya adalah sebagai berikut :
+>
+```php
+<?php
+
+
+function encryptUrl($data)
+{
+    $key = 'MYs3cR3tK3y#2023';
+    $iv = random_bytes(openssl_cipher_iv_length('AES-256-CBC'));
+    $encrypted = openssl_encrypt($data, 'AES-256-CBC', $key, 0, $iv);
+    return rawurlencode(base64_encode($iv . $encrypted));
+}
+
+function decryptUrl($encryptedData)
+{
+    $key = 'MYs3cR3tK3y#2023';
+    $decodedData = base64_decode(rawurldecode($encryptedData));
+    $ivLength = openssl_cipher_iv_length('AES-256-CBC');
+    $iv = substr($decodedData, 0, $ivLength);
+    $encrypted = substr($decodedData, $ivLength);
+    return openssl_decrypt($encrypted, 'AES-256-CBC', $key, 0, $iv);
+}
+```
+
+
+> lalu ubah tombol edit dan deletenya menjadi seperti berikut ini :
+
+> edit
+```php
+<a href="/film/update/<?= encryptUrl($film["id"]); ?>" class="btn btn-success">Update</a>
+ ```
+
+> delete, edit pada javascript confirmdeletenya
+```javascript
+<script>
+    function confirmDelete() {
+        swal({
+                title: "Apakah Anda yakin?",
+                text: "setelah dihapus! data anda akan benar-benar hilang!",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((willDelete) => {
+                if (willDelete) {
+
+                    window.location.href = "/film/destroy/<?= encryptUrl($film['id']) ?>";
+
+                } else {
+                    swal("Data tidak jadi dihapus!");
+                }
+            });
+    }
+</script>
+```
+
+lalu ubah method update menjadi seperti berikut ini :
+
+```php
+    public function update($id)
+    {
+        $decryptedId = decryptUrl($id);
+        $data["genre"] = $this->genre->getAllData();
+        $data["errors"] = session('errors');
+        $data["film"] = $this->film->getDataByID($decryptedId);
+        return view("film/edit", $data);
+    }
+```
+
+
+dan destroy menjadi seperti ini :
+
+```php
+    public function destroy($id)
+    {
+        $decryptedId = decryptUrl($id);
+        $this->film->delete($decryptedId);
+        session()->setFlashdata('success', 'Data berhasil dihapus.');
+        return redirect()->to('/film');
+    }
+```
